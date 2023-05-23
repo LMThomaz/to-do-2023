@@ -2,21 +2,33 @@ import { AntDesign, Entypo, Feather } from '@expo/vector-icons'
 import { Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 
-export function ItemList() {
-  const checked = true
+interface ItemListProps {
+  onToggleCheckToDo: (title: string) => void
+  onRemoveToDo: (title: string) => void
+  title: string
+  checked: boolean
+}
+
+export function ItemList(props: ItemListProps) {
+  const { checked, onRemoveToDo, onToggleCheckToDo, title } = props
 
   return (
     <View style={styles.container}>
-      {checked ? (
-        <AntDesign name="checkcircle" size={24} color="#5E60CE" />
-      ) : (
-        <Entypo name="circle" size={24} color="#4EA8DE" />
-      )}
+      <TouchableOpacity onPress={() => onToggleCheckToDo(title)}>
+        {checked ? (
+          <AntDesign name="checkcircle" size={24} color="#5E60CE" />
+        ) : (
+          <Entypo name="circle" size={24} color="#4EA8DE" />
+        )}
+      </TouchableOpacity>
 
       <Text style={[styles.text, checked ? styles.textChecked : {}]}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
+        {title}
       </Text>
-      <TouchableOpacity style={styles.buttonRemove}>
+      <TouchableOpacity
+        style={styles.buttonRemove}
+        onPress={() => onRemoveToDo(title)}
+      >
         <Feather name="trash-2" size={24} color="#808080" />
       </TouchableOpacity>
     </View>
