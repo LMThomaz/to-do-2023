@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: '#262626',
+    color: '#F2F2F2',
     height: 54,
     borderRadius: 6,
     padding: 16,
@@ -40,12 +41,9 @@ export const styles = StyleSheet.create({
     marginHorizontal: 24,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderBottomColor: '#333333',
-    borderBottomWidth: 1,
   },
   info: {
     flexDirection: 'row',
-
     gap: 8,
   },
   infoText: {

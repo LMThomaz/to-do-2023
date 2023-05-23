@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     paddingTop: 48,
+    borderTopColor: '#333333',
+    borderTopWidth: 1,
   },
   wrapperText: {},
   text: {

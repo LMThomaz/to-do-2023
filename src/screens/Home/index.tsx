@@ -1,7 +1,7 @@
 import { AntDesign } from '@expo/vector-icons'
 import { Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { EmptyList } from '../../components/EmptyList'
 import { Header } from '../../components/Header'
+import { ItemList } from '../../components/ItemList'
 import { styles } from './styles'
 
 export function Home() {
@@ -31,7 +31,7 @@ export function Home() {
             <Text style={styles.infoNumber}>0</Text>
           </View>
         </View>
-        <EmptyList />
+        <ItemList />
       </View>
     </View>
   )
