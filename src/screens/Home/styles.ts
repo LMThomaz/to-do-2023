@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
     padding: 16,
     flex: 1,
     fontSize: 16,
+    fontFamily: 'Inter_400Regular',
   },
   buttonAdd: {
     backgroundColor: '#1E6F9F',
@@ -32,5 +33,38 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  wrapperInfo: {
+    paddingTop: 32,
+    paddingBottom: 20,
+    marginHorizontal: 24,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderBottomColor: '#333333',
+    borderBottomWidth: 1,
+  },
+  info: {
+    flexDirection: 'row',
+
+    gap: 8,
+  },
+  infoText: {
+    color: '#4EA8DE',
+    fontFamily: 'Inter_700Bold',
+    fontSize: 14,
+  },
+  infoTextPurple: {
+    color: '#8284FA',
+  },
+  infoNumber: {
+    backgroundColor: '#333333',
+    fontFamily: 'Inter_700Bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 20,
+    fontSize: 12,
+    paddingHorizontal: 8,
+    borderRadius: 999,
+    color: '#D9D9D9',
   },
 })

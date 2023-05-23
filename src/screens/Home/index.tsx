@@ -1,5 +1,6 @@
 import { AntDesign } from '@expo/vector-icons'
-import { TextInput, TouchableOpacity, View } from 'react-native'
+import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { EmptyList } from '../../components/EmptyList'
 import { Header } from '../../components/Header'
 import { styles } from './styles'
 
@@ -18,6 +19,19 @@ export function Home() {
             <AntDesign name="pluscircleo" size={16} color="#F2F2F2" />
           </TouchableOpacity>
         </View>
+        <View style={styles.wrapperInfo}>
+          <View style={styles.info}>
+            <Text style={styles.infoText}>Criadas</Text>
+            <Text style={styles.infoNumber}>0</Text>
+          </View>
+          <View style={styles.info}>
+            <Text style={[styles.infoText, styles.infoTextPurple]}>
+              Concluídas
+            </Text>
+            <Text style={styles.infoNumber}>0</Text>
+          </View>
+        </View>
+        <EmptyList />
       </View>
     </View>
   )
